@@ -69,7 +69,7 @@
     background: var(--white);
     border-bottom: 2px solid var(--border);
     position: sticky;
-    top: 86px;
+    top: var(--header-h, 86px);
     z-index: 90;
   }
   .nav-tabs-inner {
@@ -443,13 +443,79 @@
   }
   .page-footer strong { color: var(--cream); }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 600px) {
-    .cards-grid { grid-template-columns: 1fr; }
-    .sim-row { flex-direction: column; align-items: flex-start; gap: 2px; }
-    .stack-step { flex-direction: column; gap: 12px; }
-    .step-number { width: 38px; height: 38px; font-size: 18px; }
-    th, td { padding: 10px 10px; }
+  /* ── RESPONSIVE MOBILE ── */
+  @media (max-width: 680px) {
+
+    /* Header compacto */
+    .site-header { padding: 14px 16px; }
+    .header-brand { display: none; }
+    .header-title { font-size: 17px; }
+    .header-badge { font-size: 11px; padding: 5px 10px; }
+
+    /* Nav tabs: más compactos, scroll horizontal con indicador */
+    .nav-tabs { top: 54px; }
+    .tab-btn { padding: 11px 14px; font-size: 12.5px; }
+
+    /* Main padding */
+    .main { padding: 20px 14px 60px; }
+
+    /* Section titles */
+    .section-title { font-size: 19px; }
+    .section-subtitle { font-size: 13px; margin-bottom: 18px; }
+
+    /* Dates bar: 2x2 grid */
+    .dates-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+    .date-chip { min-width: unset; padding: 10px 12px; }
+    .date-chip .value { font-size: 14px; }
+
+    /* Alert banner */
+    .alert-banner { padding: 12px 14px; gap: 10px; margin-bottom: 18px; }
+    .alert-banner p { font-size: 13px; }
+
+    /* Filter bar */
+    .filter-bar { padding: 12px; gap: 8px; }
+    .filter-btn { padding: 7px 12px; font-size: 12px; min-height: 36px; }
+
+    /* Cards de bancos */
+    .cards-grid { grid-template-columns: 1fr; gap: 10px; }
+    .card-header { padding: 14px 16px; }
+    .card-bank-name { font-size: 16px; }
+    .card-body.open { padding: 14px 16px; }
+    .card-row-val { font-size: 13px; }
+
+    /* Stackeo */
+    .stack-step { flex-direction: row; gap: 14px; padding: 16px; }
+    .step-number { width: 36px; height: 36px; font-size: 17px; flex-shrink: 0; }
+    .step-title { font-size: 15px; }
+    .step-desc { font-size: 13px; }
+
+    /* Simulacion */
+    .simulacion { padding: 20px 16px; border-radius: 12px; }
+    .sim-title { font-size: 17px; }
+    .sim-row { font-size: 13px; padding: 8px 10px; }
+    .sim-row.final .sim-val { font-size: 16px; }
+
+    /* Herramientas */
+    .tool-header { padding: 16px; gap: 12px; }
+    .tool-icon { width: 40px; height: 40px; font-size: 20px; border-radius: 10px; }
+    .tool-name { font-size: 17px; }
+    .tool-body { padding: 16px; }
+    .step-item { padding: 10px 12px; }
+    .step-text { font-size: 13px; }
+
+    /* Key dates list en cards */
+    .key-date { min-width: 70px; font-size: 12px; }
+
+    /* Sim rows no rompen */
+    .sim-label { font-size: 12.5px; flex: 1; }
+    .sim-val { font-size: 13px; }
+  }
+
+  @media (max-width: 380px) {
+    .dates-bar { grid-template-columns: 1fr; }
+    .header-title { font-size: 15px; }
+    .tab-btn { padding: 10px 11px; font-size: 11.5px; }
+    .filter-btn { font-size: 11.5px; padding: 6px 10px; }
   }
 
   /* scrollbar table */
@@ -458,6 +524,85 @@
   .table-wrap::-webkit-scrollbar-thumb { background: var(--green-lt); border-radius: 4px; }
 
   .divider { height: 1.5px; background: var(--border); margin: 28px 0; }
+
+  /* Scroll hint shown via JS on desktop */
+
+  /* ── MOBILE BANK CARDS (JS-generated) ── */
+  .mobile-cards-wrap { display: none; flex-direction: column; gap: 12px; }
+
+  .m-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .m-card.hidden-row { display: none; }
+
+  .m-card-header {
+    background: var(--green);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .m-card-name {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .m-card-type {
+    font-size: 11px;
+    color: rgba(245,242,235,0.7);
+    margin-top: 2px;
+  }
+  .m-card-body {
+    padding: 12px 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .m-card-row {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .m-card-row:last-child { border-bottom: none; padding-bottom: 4px; }
+  .m-card-row:first-child { padding-top: 4px; }
+  .m-card-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--green);
+  }
+  .m-card-val {
+    font-size: 13.5px;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+  .m-activacion-row {
+    margin-top: 4px;
+    padding-top: 10px;
+    border-top: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .m-activacion-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--mid);
+  }
+
+  /* JS controls show/hide — these are just defaults */
+  .mobile-cards-wrap { display: none; }
 </style>
 </head>
 <body>
@@ -527,6 +672,9 @@
       <button class="filter-btn" onclick="filterTable('manual', this)">Requiere activación</button>
     </div>
 
+    <div class="scroll-hint" style="display:none;font-size:12px;color:var(--mid);text-align:center;padding:6px 0 2px;letter-spacing:0.02em;">
+      Desliza para ver más columnas →
+    </div>
     <div class="table-wrap">
       <table id="main-table">
         <thead>
@@ -542,232 +690,234 @@
         <tbody>
           <!-- Citibanamex -->
           <tr data-tipo="cashback msi manual">
-            <td><strong>Citibanamex</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital + adicionales</span></td>
-            <td>10% bonif. a 12 MSI<br>15% bonif. a 18 MSI<br><span class="badge badge-gold">Horas Banamex: hasta $20,000</span></td>
-            <td>12 o 18 MSI</td>
-            <td>$10,000 acumulado</td>
-            <td>$5,000 base<br>$20,000 Horas Banamex<br><small style="color:var(--mid)">(15:00 a 17:00 CDMX)</small></td>
-            <td><span class="badge badge-red">Registro previo</span></td>
+            <td data-label="Banco / Emisor"><strong>Citibanamex</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital + adicionales</span></td>
+            <td data-label="Beneficio principal">10% bonif. a 12 MSI<br>15% bonif. a 18 MSI<br><span class="badge badge-gold">Horas Banamex: hasta $20,000</span></td>
+            <td data-label="MSI / Quincenas">12 o 18 MSI</td>
+            <td data-label="Compra mínima">$10,000 acumulado</td>
+            <td data-label="Tope devolución">$5,000 base<br>$20,000 Horas Banamex<br><small style="color:var(--mid)">(15:00 a 17:00 CDMX)</small></td>
+            <td data-label="Activación"><span class="badge badge-red">Registro previo</span></td>
           </tr>
           <!-- BBVA -->
           <tr data-tipo="cashback msi auto">
-            <td><strong>BBVA México</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
-            <td>15% bonificación en MSI<br>+10% cupón ML / MercadoPago<br>+Hasta 16% reembolso Amazon</td>
-            <td>6, 9, 12, 15, 18, 20 o 24 MSI</td>
-            <td>$5,000 (6 a 9 MSI)<br>$7,500 (12 a 24 MSI)</td>
-            <td>$9,000 total por cliente</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>BBVA México</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
+            <td data-label="Beneficio principal">15% bonificación en MSI<br>+10% cupón ML / MercadoPago<br>+Hasta 16% reembolso Amazon</td>
+            <td data-label="MSI / Quincenas">6, 9, 12, 15, 18, 20 o 24 MSI</td>
+            <td data-label="Compra mínima">$5,000 (6 a 9 MSI)<br>$7,500 (12 a 24 MSI)</td>
+            <td data-label="Tope devolución">$9,000 total por cliente</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- HSBC -->
           <tr data-tipo="cashback msi manual">
-            <td><strong>HSBC México</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
-            <td>30% bonif. (Premier / ONE pre-aprobados)<br>20% bonif. (Premier / ONE regulares)<br>10% bonif. (cartera estándar)</td>
-            <td>6 o más MSI</td>
-            <td>$13,500 acumulado (titular + adicionales)</td>
-            <td>$7,000 por titular<br><small style="color:var(--mid)">Aplica el mismo tope para todos los tiers</small></td>
-            <td><span class="badge badge-red">Registro previo</span></td>
+            <td data-label="Banco / Emisor"><strong>HSBC México</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
+            <td data-label="Beneficio principal">30% bonif. (Premier / ONE pre-aprobados)<br>20% bonif. (Premier / ONE regulares)<br>10% bonif. (cartera estándar)</td>
+            <td data-label="MSI / Quincenas">6 o más MSI</td>
+            <td data-label="Compra mínima">$13,500 acumulado (titular + adicionales)</td>
+            <td data-label="Tope devolución">$7,000 por titular<br><small style="color:var(--mid)">Aplica el mismo tope para todos los tiers</small></td>
+            <td data-label="Activación"><span class="badge badge-red">Registro previo</span></td>
           </tr>
           <!-- Santander -->
           <tr data-tipo="cashback msi manual">
-            <td><strong>Santander</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
-            <td>TDC: 15% cashback desde $1,500 MXN<br>TDD: $100 de descuento desde $600 MXN<br>+Cupones Amazon, ML, PayPal</td>
-            <td>Según comercio participante</td>
-            <td>TDC: $1,500 por transacción<br>TDD: $600 por transacción</td>
-            <td>Sujeto a presupuesto global</td>
-            <td><span class="badge badge-red">Registro previo</span></td>
+            <td data-label="Banco / Emisor"><strong>Santander</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td data-label="Beneficio principal">TDC: 15% cashback desde $1,500 MXN<br>TDD: $100 de descuento desde $600 MXN<br>+Cupones Amazon, ML, PayPal</td>
+            <td data-label="MSI / Quincenas">Según comercio participante</td>
+            <td data-label="Compra mínima">TDC: $1,500 por transacción<br>TDD: $600 por transacción</td>
+            <td data-label="Tope devolución">Sujeto a presupuesto global</td>
+            <td data-label="Activación"><span class="badge badge-red">Registro previo</span></td>
           </tr>
           <!-- Banorte -->
           <tr data-tipo="cashback msi manual">
-            <td><strong>Banorte</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital (física excluida)</span></td>
-            <td>15% bonif. en MSI comercios participantes<br>15% bonif. Amazon (tope $5,000)<br>10% descuento ML (código BNRTHS) + 15% bonif.<br>15% bonif. Walmart/Sam's/Bodega desde $5,000</td>
-            <td>MSI en comercios afiliados<br>Walmart/Sam's: 12 o 18 MSI</td>
-            <td>$3,000 por ticket (Amazon y ML)<br>$5,000 (Walmart, Sam's, Bodega)</td>
-            <td>$9,000 total por cliente<br>$5,000 (Amazon y ML por separado)</td>
-            <td><span class="badge badge-red">Activar en app</span></td>
+            <td data-label="Banco / Emisor"><strong>Banorte</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital (física excluida)</span></td>
+            <td data-label="Beneficio principal">15% bonif. en MSI comercios participantes<br>15% bonif. Amazon (tope $5,000)<br>10% descuento ML (código BNRTHS) + 15% bonif.<br>15% bonif. Walmart/Sam's/Bodega desde $5,000</td>
+            <td data-label="MSI / Quincenas">MSI en comercios afiliados<br>Walmart/Sam's: 12 o 18 MSI</td>
+            <td data-label="Compra mínima">$3,000 por ticket (Amazon y ML)<br>$5,000 (Walmart, Sam's, Bodega)</td>
+            <td data-label="Tope devolución">$9,000 total por cliente<br>$5,000 (Amazon y ML por separado)</td>
+            <td data-label="Activación"><span class="badge badge-red">Activar en app</span></td>
           </tr>
           <!-- Scotiabank -->
           <tr data-tipo="cashback msi manual">
-            <td><strong>Scotiabank</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
-            <td>Hasta 20% cashback<br>(15% base + 5% días seleccionados)</td>
-            <td>Contado o MSI (solo crédito)</td>
-            <td>$10,000 acumulado</td>
-            <td>$5,000 crédito<br>$2,000 débito</td>
-            <td><span class="badge badge-red">Registro previo</span></td>
+            <td data-label="Banco / Emisor"><strong>Scotiabank</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td data-label="Beneficio principal">Hasta 20% cashback<br>(15% base + 5% días seleccionados)</td>
+            <td data-label="MSI / Quincenas">Contado o MSI (solo crédito)</td>
+            <td data-label="Compra mínima">$10,000 acumulado</td>
+            <td data-label="Tope devolución">$5,000 crédito<br>$2,000 débito</td>
+            <td data-label="Activación"><span class="badge badge-red">Registro previo</span></td>
           </tr>
           <!-- Amex -->
           <tr data-tipo="cashback msi manual">
-            <td><strong>American Express</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y servicios</span></td>
-            <td>$1,500 cashback fijo (Aeroméxico, Walmart, etc.)<br>$2,000 con Platinum Aeroméxico</td>
-            <td>3, 6, 9, 12 o 18 MSI</td>
-            <td>Variable por oferta<br>(desde $500 general)</td>
-            <td>$1,500 o $2,000 por oferta activada</td>
-            <td><span class="badge badge-red">Guardar Amex Offers</span></td>
+            <td data-label="Banco / Emisor"><strong>American Express</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y servicios</span></td>
+            <td data-label="Beneficio principal">$1,500 cashback fijo (Aeroméxico, Walmart, etc.)<br>$2,000 con Platinum Aeroméxico</td>
+            <td data-label="MSI / Quincenas">3, 6, 9, 12 o 18 MSI</td>
+            <td data-label="Compra mínima">Variable por oferta<br>(desde $500 general)</td>
+            <td data-label="Tope devolución">$1,500 o $2,000 por oferta activada</td>
+            <td data-label="Activación"><span class="badge badge-red">Guardar Amex Offers</span></td>
           </tr>
           <!-- Openbank -->
           <tr data-tipo="cashback msi auto">
-            <td><strong>Openbank</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
-            <td>3% cashback ilimitado en digital<br>$500 bono en app al diferir<br>10% cupón ML y Walmart</td>
-            <td>3 MSI (compras digitales &gt;$1,500)</td>
-            <td>$5,000 para bono de $500<br>Sin mínimo para cashback 3%</td>
-            <td>$500 (bono) + 3% ilimitado</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Openbank</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td data-label="Beneficio principal">3% cashback ilimitado en digital<br>$500 bono en app al diferir<br>10% cupón ML y Walmart</td>
+            <td data-label="MSI / Quincenas">3 MSI (compras digitales &gt;$1,500)</td>
+            <td data-label="Compra mínima">$5,000 para bono de $500<br>Sin mínimo para cashback 3%</td>
+            <td data-label="Tope devolución">$500 (bono) + 3% ilimitado</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- Nu -->
           <tr data-tipo="cashback auto">
-            <td><strong>Nu México</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito digital</span></td>
-            <td>VeraNu 2026: 1 cofre virtual<br>(hasta $500) por cada $1,000 gastados</td>
-            <td>Contado o MSI en participantes</td>
-            <td>$400 por transacción<br>$3,000 acumulado (límite cofres)</td>
-            <td>Máx. 3 cofres ($1,500 total)</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Nu México</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito digital</span></td>
+            <td data-label="Beneficio principal">VeraNu 2026: 1 cofre virtual<br>(hasta $500) por cada $1,000 gastados</td>
+            <td data-label="MSI / Quincenas">Contado o MSI en participantes</td>
+            <td data-label="Compra mínima">$400 por transacción<br>$3,000 acumulado (límite cofres)</td>
+            <td data-label="Tope devolución">Máx. 3 cofres ($1,500 total)</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- Mercado Pago -->
           <tr data-tipo="cashback msi auto">
-            <td><strong>Mercado Pago</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
-            <td>Hasta 24 MSI en Mercado Libre<br>15% cupón de descuento</td>
-            <td>Hasta 24 MSI con tarjeta propia</td>
-            <td>$2,000 para cupones<br>Sin mínimo para MSI</td>
-            <td>$1,000 descuento por transacción</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Mercado Pago</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
+            <td data-label="Beneficio principal">Hasta 24 MSI en Mercado Libre<br>15% cupón de descuento</td>
+            <td data-label="MSI / Quincenas">Hasta 24 MSI con tarjeta propia</td>
+            <td data-label="Compra mínima">$2,000 para cupones<br>Sin mínimo para MSI</td>
+            <td data-label="Tope devolución">$1,000 descuento por transacción</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- Klar -->
           <tr data-tipo="cashback auto">
-            <td><strong>Klar</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
-            <td>Klarfest: reembolsos probabilísticos<br>aleatorios hasta 100%</td>
-            <td>Contado</td>
-            <td>Variable según comercio</td>
-            <td>Sujeto a sorteo</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Klar</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td data-label="Beneficio principal">Klarfest: reembolsos probabilísticos<br>aleatorios hasta 100%</td>
+            <td data-label="MSI / Quincenas">Contado</td>
+            <td data-label="Compra mínima">Variable según comercio</td>
+            <td data-label="Tope devolución">Sujeto a sorteo</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- Stori -->
           <tr data-tipo="cashback msi auto">
-            <td><strong>Stori</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
-            <td>Reembolsos en compras seleccionadas<br>Plazos sin intereses</td>
-            <td>Según comercio participante</td>
-            <td>Variable</td>
-            <td>Variable</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Stori</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
+            <td data-label="Beneficio principal">Reembolsos en compras seleccionadas<br>Plazos sin intereses</td>
+            <td data-label="MSI / Quincenas">Según comercio participante</td>
+            <td data-label="Compra mínima">Variable</td>
+            <td data-label="Tope devolución">Variable</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- Ualá -->
           <tr data-tipo="cashback auto">
-            <td><strong>Ualá</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
-            <td>Descuentos en Xiaomi Store, Decathlon<br>y socios del evento</td>
-            <td>Contado</td>
-            <td>Variable</td>
-            <td>Variable</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Ualá</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td data-label="Beneficio principal">Descuentos en Xiaomi Store, Decathlon<br>y socios del evento</td>
+            <td data-label="MSI / Quincenas">Contado</td>
+            <td data-label="Compra mínima">Variable</td>
+            <td data-label="Tope devolución">Variable</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- Kueski -->
           <tr data-tipo="bnpl">
-            <td><strong>Kueski Pay</strong><br><span style="font-size:12px;color:var(--mid)">BNPL · sin tarjeta de crédito</span></td>
-            <td>Financiamiento a quincenas<br>Cupones Amazon, Viva, Adidas</td>
-            <td>4 a 6 quincenas sin intereses</td>
-            <td>$1,500 (cupón Amazon)<br>$2,599 (QSI retail)</td>
-            <td>Según cupón de cada marca</td>
-            <td><span class="badge badge-gray">Código en checkout</span></td>
+            <td data-label="Banco / Emisor"><strong>Kueski Pay</strong><br><span style="font-size:12px;color:var(--mid)">BNPL · sin tarjeta de crédito</span></td>
+            <td data-label="Beneficio principal">Financiamiento a quincenas<br>Cupones Amazon, Viva, Adidas</td>
+            <td data-label="MSI / Quincenas">4 a 6 quincenas sin intereses</td>
+            <td data-label="Compra mínima">$1,500 (cupón Amazon)<br>$2,599 (QSI retail)</td>
+            <td data-label="Tope devolución">Según cupón de cada marca</td>
+            <td data-label="Activación"><span class="badge badge-gray">Código en checkout</span></td>
           </tr>
           <!-- Aplazo -->
           <tr data-tipo="bnpl">
-            <td><strong>Aplazo</strong><br><span style="font-size:12px;color:var(--mid)">BNPL · sin tarjeta de crédito</span></td>
-            <td>15% descuento primera compra (HS2026)<br>20% bonif. puntos en Papelería Lumen</td>
-            <td>3 quincenas sin intereses</td>
-            <td>Sin mínimo (descuento)<br>$2,000 (QSI)</td>
-            <td>Variable según cupón</td>
-            <td><span class="badge badge-gray">Código HS2026</span></td>
+            <td data-label="Banco / Emisor"><strong>Aplazo</strong><br><span style="font-size:12px;color:var(--mid)">BNPL · sin tarjeta de crédito</span></td>
+            <td data-label="Beneficio principal">15% descuento primera compra (HS2026)<br>20% bonif. puntos en Papelería Lumen</td>
+            <td data-label="MSI / Quincenas">3 quincenas sin intereses</td>
+            <td data-label="Compra mínima">Sin mínimo (descuento)<br>$2,000 (QSI)</td>
+            <td data-label="Tope devolución">Variable según cupón</td>
+            <td data-label="Activación"><span class="badge badge-gray">Código HS2026</span></td>
           </tr>
           <!-- Liverpool -->
           <tr data-tipo="cashback msi auto">
-            <td><strong>Liverpool</strong><br><span style="font-size:12px;color:var(--mid)">Tarjeta departamental</span></td>
-            <td>10% descuento primer día<br>+5% adicional con app Liverpool Pocket</td>
-            <td>6 MSI con procesadores</td>
-            <td>$500 para MSI externas</td>
-            <td>Sujeto a línea de crédito</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Liverpool</strong><br><span style="font-size:12px;color:var(--mid)">Tarjeta departamental</span></td>
+            <td data-label="Beneficio principal">10% descuento primer día<br>+5% adicional con app Liverpool Pocket</td>
+            <td data-label="MSI / Quincenas">6 MSI con procesadores</td>
+            <td data-label="Compra mínima">$500 para MSI externas</td>
+            <td data-label="Tope devolución">Sujeto a línea de crédito</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- Coppel -->
           <tr data-tipo="cashback auto">
-            <td><strong>Coppel</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Coppel / Coppel Pay</span></td>
-            <td>Descuentos directos en etiqueta<br>Financiamiento vía Coppel Pay</td>
-            <td>Amortización mensual con interés</td>
-            <td>Sin mínimo general</td>
-            <td>Sujeto a línea de crédito</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Coppel</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Coppel / Coppel Pay</span></td>
+            <td data-label="Beneficio principal">Descuentos directos en etiqueta<br>Financiamiento vía Coppel Pay</td>
+            <td data-label="MSI / Quincenas">Amortización mensual con interés</td>
+            <td data-label="Compra mínima">Sin mínimo general</td>
+            <td data-label="Tope devolución">Sujeto a línea de crédito</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- DiDi Card -->
           <tr data-tipo="cashback auto">
-            <td><strong>DiDi Card</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Mastercard</span></td>
-            <td>10% cashback en compras participantes<br>Bonificaciones hasta $10,000 en estado de cuenta</td>
-            <td>Contado (cashback aplica)</td>
-            <td>Variable</td>
-            <td>Hasta $10,000</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>DiDi Card</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Mastercard</span></td>
+            <td data-label="Beneficio principal">10% cashback en compras participantes<br>Bonificaciones hasta $10,000 en estado de cuenta</td>
+            <td data-label="MSI / Quincenas">Contado (cashback aplica)</td>
+            <td data-label="Compra mínima">Variable</td>
+            <td data-label="Tope devolución">Hasta $10,000</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- RappiCard -->
           <tr data-tipo="cashback msi manual">
-            <td><strong>RappiCard</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Visa</span></td>
-            <td>12.5% cashback en MSI y contado<br>$250 por cada $2,000 en comercios participantes<br>+100 comercios afiliados</td>
-            <td>3 a 18 MSI en comercios participantes</td>
-            <td>$2,000 por transacción</td>
-            <td>Consultar tope en app antes de comprar</td>
-            <td><span class="badge badge-red">Activar banner en app</span></td>
+            <td data-label="Banco / Emisor"><strong>RappiCard</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Visa</span></td>
+            <td data-label="Beneficio principal">12.5% cashback en MSI y contado<br>$250 por cada $2,000 en comercios participantes<br>+100 comercios afiliados</td>
+            <td data-label="MSI / Quincenas">3 a 18 MSI en comercios participantes</td>
+            <td data-label="Compra mínima">$2,000 por transacción</td>
+            <td data-label="Tope devolución">Consultar tope en app antes de comprar</td>
+            <td data-label="Activación"><span class="badge badge-red">Activar banner en app</span></td>
           </tr>
           <!-- INVEX -->
           <tr data-tipo="cashback msi manual">
-            <td><strong>INVEX</strong><br><span style="font-size:12px;color:var(--mid)">Crédito</span></td>
-            <td>10% cashback en compras pagadas a MSI</td>
-            <td>MSI en comercios participantes</td>
-            <td>No publicado</td>
-            <td>No publicado</td>
-            <td><span class="badge badge-red">Verificar en app INVEX</span></td>
+            <td data-label="Banco / Emisor"><strong>INVEX</strong><br><span style="font-size:12px;color:var(--mid)">Crédito</span></td>
+            <td data-label="Beneficio principal">10% cashback en compras pagadas a MSI</td>
+            <td data-label="MSI / Quincenas">MSI en comercios participantes</td>
+            <td data-label="Compra mínima">No publicado</td>
+            <td data-label="Tope devolución">No publicado</td>
+            <td data-label="Activación"><span class="badge badge-red">Verificar en app INVEX</span></td>
           </tr>
           <!-- Banregio -->
           <tr data-tipo="msi manual">
-            <td><strong>Banregio</strong><br><span style="font-size:12px;color:var(--mid)">Crédito</span></td>
-            <td>3 a 12 meses sin intereses<br>(sin cashback adicional anunciado)</td>
-            <td>3, 6, 9 o 12 MSI</td>
-            <td>$3,000 mínimo</td>
-            <td>Hasta $100,000 en compra</td>
-            <td><span class="badge badge-red">Verificar en app</span></td>
+            <td data-label="Banco / Emisor"><strong>Banregio</strong><br><span style="font-size:12px;color:var(--mid)">Crédito</span></td>
+            <td data-label="Beneficio principal">3 a 12 meses sin intereses<br>(sin cashback adicional anunciado)</td>
+            <td data-label="MSI / Quincenas">3, 6, 9 o 12 MSI</td>
+            <td data-label="Compra mínima">$3,000 mínimo</td>
+            <td data-label="Tope devolución">Hasta $100,000 en compra</td>
+            <td data-label="Activación"><span class="badge badge-red">Verificar en app</span></td>
           </tr>
           <!-- PayPal -->
           <tr data-tipo="cashback manual">
-            <td><strong>PayPal</strong><br><span style="font-size:12px;color:var(--mid)">Procesador de pagos</span></td>
-            <td>Cupón hasta $1,500 (con Banamex)<br>Cupón hasta $1,000 (Amex/Banorte/BBVA/HSBC/Santander)<br>Cupón $500 (cualquier otro banco)<br><span class="badge badge-red">Cupos limitados</span></td>
-            <td>MSI en comercios afiliados a PayPal</td>
-            <td>$2,500 a MSI para calificar</td>
-            <td>$500 a $1,500 según banco<br>Cupos: 4,669 (Banamex) / 2,000 (otros)</td>
-            <td><span class="badge badge-red">Compra a MSI vía PayPal</span></td>
+            <td data-label="Banco / Emisor"><strong>PayPal</strong><br><span style="font-size:12px;color:var(--mid)">Procesador de pagos</span></td>
+            <td data-label="Beneficio principal">Cupón hasta $1,500 (con Banamex)<br>Cupón hasta $1,000 (Amex/Banorte/BBVA/HSBC/Santander)<br>Cupón $500 (cualquier otro banco)<br><span class="badge badge-red">Cupos limitados</span></td>
+            <td data-label="MSI / Quincenas">MSI en comercios afiliados a PayPal</td>
+            <td data-label="Compra mínima">$2,500 a MSI para calificar</td>
+            <td data-label="Tope devolución">$500 a $1,500 según banco<br>Cupos: 4,669 (Banamex) / 2,000 (otros)</td>
+            <td data-label="Activación"><span class="badge badge-red">Compra a MSI vía PayPal</span></td>
           </tr>
           <!-- Spin by OXXO -->
           <tr data-tipo="cashback auto">
-            <td><strong>Spin by OXXO</strong><br><span style="font-size:12px;color:var(--mid)">Tarjeta Visa prepago digital</span></td>
-            <td>5% cashback ($5 por cada $100 de compra)<br><span class="badge badge-red">Solo por invitación directa</span><br>Limitado a 50,000 clientes</td>
-            <td>Contado</td>
-            <td>$100 por transacción</td>
-            <td>Máx. $25 por cliente (1 sola compra)</td>
-            <td><span class="badge badge-red">Solo invitados + primeros 50,000</span></td>
+            <td data-label="Banco / Emisor"><strong>Spin by OXXO</strong><br><span style="font-size:12px;color:var(--mid)">Tarjeta Visa prepago digital</span></td>
+            <td data-label="Beneficio principal">5% cashback ($5 por cada $100 de compra)<br><span class="badge badge-red">Solo por invitación directa</span><br>Limitado a 50,000 clientes</td>
+            <td data-label="MSI / Quincenas">Contado</td>
+            <td data-label="Compra mínima">$100 por transacción</td>
+            <td data-label="Tope devolución">Máx. $25 por cliente (1 sola compra)</td>
+            <td data-label="Activación"><span class="badge badge-red">Solo invitados + primeros 50,000</span></td>
           </tr>
           <!-- Falabella CMR -->
           <tr data-tipo="cashback msi auto">
-            <td><strong>Falabella CMR</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Mastercard</span></td>
-            <td>$300 de bonificación por cada $3,000 a MSI<br>(equivale a 10% de devolución)</td>
-            <td>MSI en comercios participantes</td>
-            <td>$3,000 por ticket a MSI</td>
-            <td>Variable según monto acumulado</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Falabella CMR</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Mastercard</span></td>
+            <td data-label="Beneficio principal">$300 de bonificación por cada $3,000 a MSI<br>(equivale a 10% de devolución)</td>
+            <td data-label="MSI / Quincenas">MSI en comercios participantes</td>
+            <td data-label="Compra mínima">$3,000 por ticket a MSI</td>
+            <td data-label="Tope devolución">Variable según monto acumulado</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
           <!-- Banco Azteca -->
           <tr data-tipo="cashback msi auto">
-            <td><strong>Banco Azteca</strong><br><span style="font-size:12px;color:var(--mid)">Tarjetas Azteca</span></td>
-            <td>Descuentos en productos con Tarjetas Azteca<br>(porcentajes no publicados aún)</td>
-            <td>MSI en comercios seleccionados</td>
-            <td>No publicado</td>
-            <td>No publicado</td>
-            <td><span class="badge badge-green">Automático</span></td>
+            <td data-label="Banco / Emisor"><strong>Banco Azteca</strong><br><span style="font-size:12px;color:var(--mid)">Tarjetas Azteca</span></td>
+            <td data-label="Beneficio principal">Descuentos en productos con Tarjetas Azteca<br>(porcentajes no publicados aún)</td>
+            <td data-label="MSI / Quincenas">MSI en comercios seleccionados</td>
+            <td data-label="Compra mínima">No publicado</td>
+            <td data-label="Tope devolución">No publicado</td>
+            <td data-label="Activación"><span class="badge badge-green">Automático</span></td>
           </tr>
         </tbody>
       </table>
     </div>
+
+    <div class="mobile-cards-wrap" id="mobile-cards"></div>
 
     <div class="alert-banner alert-red" style="margin-top:20px">
       <div class="alert-icon">🚫</div>
@@ -1716,38 +1866,172 @@
 </footer>
 
 <script>
+  // ─────────────────────────────────────────
+  // UTILS
+  // ─────────────────────────────────────────
+  function isMobile() { return window.innerWidth <= 680; }
+
+  function updateNavTop() {
+    var h = document.querySelector('.site-header');
+    if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+  }
+
+  // ─────────────────────────────────────────
+  // TAB SWITCHING
+  // ─────────────────────────────────────────
   function switchTab(id) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(function(s) { s.classList.remove('active'); });
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
     document.getElementById('tab-' + id).classList.add('active');
     event.target.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function filterTable(tipo, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const rows = document.querySelectorAll('#main-table tbody tr');
-    rows.forEach(row => {
-      if (tipo === 'todos') {
-        row.classList.remove('hidden-row');
-      } else {
-        const tipos = row.dataset.tipo || '';
-        if (tipos.includes(tipo)) {
-          row.classList.remove('hidden-row');
-        } else {
-          row.classList.add('hidden-row');
-        }
-      }
+  // ─────────────────────────────────────────
+  // BANK CARDS (mobile view)
+  // ─────────────────────────────────────────
+  function buildMobileCards() {
+    var container = document.getElementById('mobile-cards');
+    if (!container) return;
+    container.innerHTML = '';
+
+    var rows = document.querySelectorAll('#main-table tbody tr');
+    rows.forEach(function(row) {
+      var cells = row.querySelectorAll('td');
+      if (cells.length < 6) return;
+
+      var tipo     = row.dataset.tipo || '';
+      var isHidden = row.classList.contains('hidden-row');
+
+      // Extract bank name and type
+      var nameEl   = cells[0].querySelector('strong');
+      var typeEl   = cells[0].querySelector('span');
+      var bankName = nameEl ? nameEl.textContent.trim() : cells[0].textContent.trim();
+      var bankType = typeEl ? typeEl.textContent.trim() : '';
+
+      // Activation badge class for header color hint
+      var activBadge = cells[5].querySelector('.badge');
+      var isAuto     = activBadge && activBadge.classList.contains('badge-green');
+      var headerBg   = isAuto ? 'background:#4A5D4C' : 'background:#3a3a3a';
+
+      // Fields to show
+      var fields = [
+        { label: 'Beneficio',        html: cells[1].innerHTML },
+        { label: 'MSI / Quincenas',  html: cells[2].innerHTML },
+        { label: 'Compra mínima',    html: cells[3].innerHTML },
+        { label: 'Tope devolución',  html: cells[4].innerHTML },
+      ];
+
+      var bodyHTML = fields.map(function(f) {
+        return '<div class="m-card-row">' +
+          '<div class="m-card-label">' + f.label + '</div>' +
+          '<div class="m-card-val">' + f.html + '</div>' +
+        '</div>';
+      }).join('');
+
+      // activación shown in header badge, no need for bottom row
+
+      var card = document.createElement('div');
+      card.className = 'm-card' + (isHidden ? ' hidden-row' : '');
+      card.dataset.tipo = tipo;
+
+      // Small top-row with name + activation badge
+      var activLabel = isAuto ? '✓ Automático' : '! Requiere activación';
+      var activStyle = isAuto
+        ? 'background:rgba(212,168,83,0.25);color:#E8C97A;'
+        : 'background:rgba(204,51,51,0.25);color:#FF9999;';
+
+      card.innerHTML =
+        '<div class="m-card-header" style="' + headerBg + '">' +
+          '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">' +
+            '<div>' +
+              '<div class="m-card-name">' + bankName + '</div>' +
+              (bankType ? '<div class="m-card-type">' + bankType + '</div>' : '') +
+            '</div>' +
+            '<span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;white-space:nowrap;flex-shrink:0;margin-top:2px;' + activStyle + '">' + activLabel + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="m-card-body">' + bodyHTML + '</div>';
+
+      container.appendChild(card);
     });
   }
 
+  // ─────────────────────────────────────────
+  // VIEW SWITCHER: table (desktop) vs cards (mobile)
+  // ─────────────────────────────────────────
+  function updateView() {
+    var tableWrap   = document.querySelector('.table-wrap');
+    var cardsWrap   = document.querySelector('.mobile-cards-wrap');
+    var scrollHint  = document.querySelector('.scroll-hint');
+
+    if (!tableWrap || !cardsWrap) return;
+
+    if (isMobile()) {
+      // Mobile: hide table, build and show cards
+      tableWrap.style.display  = 'none';
+      if (scrollHint) scrollHint.style.display = 'none';
+      cardsWrap.style.display  = 'flex';
+      buildMobileCards();
+    } else {
+      // Desktop: show table, hide cards
+      tableWrap.style.display  = '';
+      if (scrollHint) scrollHint.style.display = 'block';
+      cardsWrap.style.display  = 'none';
+    }
+
+    updateNavTop();
+  }
+
+  // ─────────────────────────────────────────
+  // FILTER (syncs both table rows and mobile cards)
+  // ─────────────────────────────────────────
+  function filterTable(tipo, btn) {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+
+    // Desktop table rows
+    document.querySelectorAll('#main-table tbody tr').forEach(function(row) {
+      var tipos = row.dataset.tipo || '';
+      var show  = tipo === 'todos' || tipos.includes(tipo);
+      row.classList.toggle('hidden-row', !show);
+    });
+
+    // Mobile cards
+    document.querySelectorAll('#mobile-cards .m-card').forEach(function(card) {
+      var tipos = card.dataset.tipo || '';
+      var show  = tipo === 'todos' || tipos.includes(tipo);
+      card.classList.toggle('hidden-row', !show);
+    });
+  }
+
+  // ─────────────────────────────────────────
+  // CARD TOGGLE (detalle por banco)
+  // ─────────────────────────────────────────
   function toggleCard(header) {
-    const body = header.nextElementSibling;
-    const toggle = header.querySelector('.card-toggle');
+    var body   = header.nextElementSibling;
+    var toggle = header.querySelector('.card-toggle');
     body.classList.toggle('open');
     toggle.classList.toggle('open');
   }
+
+  // ─────────────────────────────────────────
+  // INIT
+  // ─────────────────────────────────────────
+  // Fire on DOMContentLoaded (most reliable cross-browser)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateView);
+  } else {
+    // DOM already ready (e.g. script at bottom)
+    updateView();
+  }
+
+  // Recheck on resize (debounced)
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(updateView, 150);
+  });
 </script>
 
 </body>

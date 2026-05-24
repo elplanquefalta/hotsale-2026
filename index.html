@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hot Sale 2026 · Guía de Promociones Bancarias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:    #F5F2EB;
+    --green:    #4A5D4C;
+    --green-lt: #6B7F6D;
+    --gold:     #D4A853;
+    --gold-lt:  #E8C97A;
+    --red:      #CC3333;
+    --dark:     #1C1C1C;
+    --mid:      #5A5A5A;
+    --border:   #D8D4C9;
+    --white:    #FFFFFF;
+    --shadow:   0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 { font-family: 'Fraunces', serif; }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--green);
+    color: var(--cream);
+    padding: 28px 24px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header-brand { font-size: 13px; opacity: 0.7; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
+  .header-title { font-family: 'Fraunces', serif; font-size: clamp(20px, 3vw, 26px); font-weight: 700; color: var(--cream); }
+  .header-badge {
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  /* ── NAV TABS ── */
+  .nav-tabs {
+    background: var(--white);
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 86px;
+    z-index: 90;
+  }
+  .nav-tabs-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-tabs-inner::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    padding: 14px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--mid);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { color: var(--green); }
+  .tab-btn.active { color: var(--green); border-bottom-color: var(--gold); font-weight: 600; }
+
+  /* ── MAIN ── */
+  .main { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; }
+
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* ── ALERT BANNER ── */
+  .alert-banner {
+    background: #FFF8E7;
+    border: 1.5px solid var(--gold);
+    border-left: 5px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .alert-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .alert-banner p { font-size: 14px; color: var(--dark); line-height: 1.5; }
+  .alert-banner strong { color: #8A5E00; }
+
+  .alert-red {
+    background: #FFF2F2;
+    border-color: var(--red);
+    border-left-color: var(--red);
+  }
+  .alert-red p strong { color: var(--red); }
+
+  /* ── DATES BAR ── */
+  .dates-bar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .date-chip {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 18px;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+  }
+  .date-chip .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mid); margin-bottom: 4px; }
+  .date-chip .value { font-family: 'Fraunces', serif; font-size: 17px; color: var(--green); font-weight: 700; }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(20px, 3vw, 26px);
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+  .section-subtitle {
+    color: var(--mid);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  /* ── FILTER BAR ── */
+  .filter-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: var(--white);
+    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    align-items: center;
+  }
+  .filter-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mid); margin-right: 4px; }
+  .filter-btn {
+    padding: 6px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 20px;
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--dark);
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+  .filter-btn:hover { border-color: var(--green); color: var(--green); }
+  .filter-btn.active { background: var(--green); color: var(--cream); border-color: var(--green); }
+
+  /* ── TABLE ── */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    font-size: 13.5px;
+  }
+  thead {
+    background: var(--green);
+    color: var(--cream);
+  }
+  th {
+    padding: 13px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #F9F7F1; }
+  tr.hidden-row { display: none; }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .badge-green { background: #E4EDE4; color: var(--green); }
+  .badge-gold  { background: #FFF3D0; color: #7A5800; }
+  .badge-red   { background: #FDEAEA; color: var(--red); }
+  .badge-gray  { background: #EBEBEB; color: #555; }
+
+  /* ── BANK CARDS ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+  .bank-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s;
+  }
+  .bank-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+  .card-header {
+    padding: 16px 18px;
+    border-bottom: 1.5px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  .card-header:hover { background: #F9F7F1; }
+  .card-bank-name { font-family: 'Fraunces', serif; font-size: 17px; color: var(--dark); }
+  .card-type { font-size: 12px; color: var(--mid); margin-top: 2px; }
+  .card-toggle { font-size: 20px; color: var(--green); transition: transform 0.2s; line-height: 1; }
+  .card-toggle.open { transform: rotate(45deg); }
+  .card-body { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; }
+  .card-body.open { max-height: 900px; padding: 16px 18px; }
+
+  .card-row { display: flex; gap: 10px; margin-bottom: 12px; }
+  .card-row:last-child { margin-bottom: 0; }
+  .card-icon { font-size: 16px; flex-shrink: 0; width: 22px; }
+  .card-row-content {}
+  .card-row-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mid); margin-bottom: 2px; }
+  .card-row-val { font-size: 13.5px; color: var(--dark); line-height: 1.5; }
+
+  .exclusion-list { list-style: none; padding: 0; }
+  .exclusion-list li { font-size: 13px; padding: 3px 0; color: var(--dark); }
+  .exclusion-list li::before { content: "▸"; color: var(--red); margin-right: 7px; font-weight: 700; }
+
+  .key-dates-list { list-style: none; padding: 0; }
+  .key-dates-list li { font-size: 13px; padding: 4px 0; color: var(--dark); border-bottom: 1px dashed var(--border); }
+  .key-dates-list li:last-child { border-bottom: none; }
+  .key-date { font-weight: 600; color: var(--green); min-width: 90px; display: inline-block; }
+
+  /* ── STACKEO ── */
+  .stack-steps { display: flex; flex-direction: column; gap: 16px; }
+  .stack-step {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  .step-number {
+    background: var(--green);
+    color: var(--cream);
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-content {}
+  .step-title { font-family: 'Fraunces', serif; font-size: 17px; color: var(--dark); margin-bottom: 6px; }
+  .step-desc { font-size: 14px; color: var(--mid); line-height: 1.6; }
+  .step-tag {
+    display: inline-block;
+    margin-top: 8px;
+    background: #E4EDE4;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* SIMULACION */
+  .simulacion {
+    background: var(--green);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-top: 28px;
+  }
+  .sim-title { font-family: 'Fraunces', serif; font-size: 20px; margin-bottom: 6px; }
+  .sim-subtitle { font-size: 13px; opacity: 0.75; margin-bottom: 24px; }
+  .sim-rows { display: flex; flex-direction: column; gap: 8px; }
+  .sim-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    font-size: 14px;
+    gap: 10px;
+  }
+  .sim-row.final {
+    background: var(--gold);
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .sim-label { opacity: 0.9; }
+  .sim-val { font-weight: 600; white-space: nowrap; }
+  .sim-row.final .sim-val { font-size: 18px; }
+  .sim-note { font-size: 12px; opacity: 0.65; margin-top: 14px; line-height: 1.5; }
+
+  /* ── HERRAMIENTAS ── */
+  .tools-grid { display: flex; flex-direction: column; gap: 24px; }
+  .tool-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .tool-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 22px;
+    border-bottom: 1.5px solid var(--border);
+    background: #F9F7F1;
+  }
+  .tool-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .tool-name { font-family: 'Fraunces', serif; font-size: 20px; color: var(--dark); }
+  .tool-tagline { font-size: 13px; color: var(--mid); margin-top: 2px; }
+  .tool-url { font-size: 12px; color: var(--green); font-weight: 600; margin-top: 4px; }
+  .tool-body { padding: 22px; }
+  .tool-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+
+  .steps-list { display: flex; flex-direction: column; gap: 10px; }
+  .step-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    background: var(--cream);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .step-num {
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 12px;
+    font-weight: 700;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step-text { font-size: 13.5px; color: var(--dark); line-height: 1.5; }
+  .step-text strong { color: var(--green); }
+
+  .tip-box {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #FFF8E7;
+    border: 1px solid var(--gold-lt);
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+  .tip-box strong { color: #7A5800; }
+
+  /* ── FOOTER ── */
+  .page-footer {
+    background: var(--green);
+    color: rgba(245,242,235,0.65);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 12.5px;
+    line-height: 1.7;
+    margin-top: 40px;
+  }
+  .page-footer strong { color: var(--cream); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .cards-grid { grid-template-columns: 1fr; }
+    .sim-row { flex-direction: column; align-items: flex-start; gap: 2px; }
+    .stack-step { flex-direction: column; gap: 12px; }
+    .step-number { width: 38px; height: 38px; font-size: 18px; }
+    th, td { padding: 10px 10px; }
+  }
+
+  /* scrollbar table */
+  .table-wrap::-webkit-scrollbar { height: 5px; }
+  .table-wrap::-webkit-scrollbar-track { background: var(--border); }
+  .table-wrap::-webkit-scrollbar-thumb { background: var(--green-lt); border-radius: 4px; }
+
+  .divider { height: 1.5px; background: var(--border); margin: 28px 0; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <div class="header-brand">ElPlanQueFalta</div>
+      <div class="header-title">Guía de Promociones · Hot Sale 2026</div>
+    </div>
+    <div class="header-badge">25 May · 2 Jun 2026</div>
+  </div>
+</header>
+
+<!-- NAV TABS -->
+<nav class="nav-tabs">
+  <div class="nav-tabs-inner">
+    <button class="tab-btn active" onclick="switchTab('tabla')">Tabla comparativa</button>
+    <button class="tab-btn" onclick="switchTab('bancos')">Detalle por banco</button>
+    <button class="tab-btn" onclick="switchTab('stackeo')">Cómo hacer stackeo</button>
+    <button class="tab-btn" onclick="switchTab('herramientas')">Herramientas de comparación</button>
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- ══════════════════════════════════════
+       TAB 1: TABLA COMPARATIVA
+  ══════════════════════════════════════ -->
+  <section class="section active" id="tab-tabla">
+
+    <div class="dates-bar">
+      <div class="date-chip">
+        <div class="label">Inicio oficial</div>
+        <div class="value">25 de mayo</div>
+      </div>
+      <div class="date-chip">
+        <div class="label">Preventa Palacio / PayPal</div>
+        <div class="value">22 al 24 de mayo</div>
+      </div>
+      <div class="date-chip">
+        <div class="label">Fin del evento</div>
+        <div class="value">2 de junio</div>
+      </div>
+      <div class="date-chip">
+        <div class="label">Registro obligatorio</div>
+        <div class="value">hotsale.com.mx</div>
+      </div>
+    </div>
+
+    <div class="alert-banner">
+      <div class="alert-icon">⚠️</div>
+      <p><strong>Antes de comprar, verifica el precio histórico.</strong> Algunos comercios elevan sus precios semanas antes del evento para simular descuentos mayores. Usa las herramientas de la sección "Herramientas de comparación" para confirmar que la oferta es real.</p>
+    </div>
+
+    <h2 class="section-title">Promociones por banco</h2>
+    <p class="section-subtitle">Filtra por tipo de beneficio o tarjeta para encontrar la combinación que aplica a tu caso.</p>
+
+    <div class="filter-bar">
+      <span class="filter-label">Filtrar:</span>
+      <button class="filter-btn active" onclick="filterTable('todos', this)">Todos</button>
+      <button class="filter-btn" onclick="filterTable('cashback', this)">Cashback / Bonificación</button>
+      <button class="filter-btn" onclick="filterTable('msi', this)">MSI disponibles</button>
+      <button class="filter-btn" onclick="filterTable('bnpl', this)">BNPL / Quincenas</button>
+      <button class="filter-btn" onclick="filterTable('auto', this)">Activación automática</button>
+      <button class="filter-btn" onclick="filterTable('manual', this)">Requiere activación</button>
+    </div>
+
+    <div class="table-wrap">
+      <table id="main-table">
+        <thead>
+          <tr>
+            <th>Banco / Emisor</th>
+            <th>Beneficio principal</th>
+            <th>MSI / Quincenas</th>
+            <th>Compra mínima</th>
+            <th>Tope devolución</th>
+            <th>Activación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Citibanamex -->
+          <tr data-tipo="cashback msi manual">
+            <td><strong>Citibanamex</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital + adicionales</span></td>
+            <td>10% bonif. a 12 MSI<br>15% bonif. a 18 MSI<br><span class="badge badge-gold">Horas Banamex: hasta $20,000</span></td>
+            <td>12 o 18 MSI</td>
+            <td>$10,000 acumulado</td>
+            <td>$5,000 base<br>$20,000 Horas Banamex<br><small style="color:var(--mid)">(15:00 a 17:00 CDMX)</small></td>
+            <td><span class="badge badge-red">Registro previo</span></td>
+          </tr>
+          <!-- BBVA -->
+          <tr data-tipo="cashback msi auto">
+            <td><strong>BBVA México</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
+            <td>15% bonificación en MSI<br>+10% cupón ML / MercadoPago<br>+Hasta 16% reembolso Amazon</td>
+            <td>6, 9, 12, 15, 18, 20 o 24 MSI</td>
+            <td>$5,000 (6 a 9 MSI)<br>$7,500 (12 a 24 MSI)</td>
+            <td>$9,000 total por cliente</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- HSBC -->
+          <tr data-tipo="cashback msi manual">
+            <td><strong>HSBC México</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
+            <td>30% bonif. (Premier / ONE pre-aprobados)<br>20% bonif. (Premier / ONE regulares)<br>10% bonif. (cartera estándar)</td>
+            <td>6 o más MSI</td>
+            <td>$13,500 acumulado (titular + adicionales)</td>
+            <td>$7,000 por titular<br><small style="color:var(--mid)">Aplica el mismo tope para todos los tiers</small></td>
+            <td><span class="badge badge-red">Registro previo</span></td>
+          </tr>
+          <!-- Santander -->
+          <tr data-tipo="cashback msi manual">
+            <td><strong>Santander</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td>TDC: 15% cashback desde $1,500 MXN<br>TDD: $100 de descuento desde $600 MXN<br>+Cupones Amazon, ML, PayPal</td>
+            <td>Según comercio participante</td>
+            <td>TDC: $1,500 por transacción<br>TDD: $600 por transacción</td>
+            <td>Sujeto a presupuesto global</td>
+            <td><span class="badge badge-red">Registro previo</span></td>
+          </tr>
+          <!-- Banorte -->
+          <tr data-tipo="cashback msi manual">
+            <td><strong>Banorte</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital (física excluida)</span></td>
+            <td>15% bonif. en MSI comercios participantes<br>15% bonif. Amazon (tope $5,000)<br>10% descuento ML (código BNRTHS) + 15% bonif.<br>15% bonif. Walmart/Sam's/Bodega desde $5,000</td>
+            <td>MSI en comercios afiliados<br>Walmart/Sam's: 12 o 18 MSI</td>
+            <td>$3,000 por ticket (Amazon y ML)<br>$5,000 (Walmart, Sam's, Bodega)</td>
+            <td>$9,000 total por cliente<br>$5,000 (Amazon y ML por separado)</td>
+            <td><span class="badge badge-red">Activar en app</span></td>
+          </tr>
+          <!-- Scotiabank -->
+          <tr data-tipo="cashback msi manual">
+            <td><strong>Scotiabank</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td>Hasta 20% cashback<br>(15% base + 5% días seleccionados)</td>
+            <td>Contado o MSI (solo crédito)</td>
+            <td>$10,000 acumulado</td>
+            <td>$5,000 crédito<br>$2,000 débito</td>
+            <td><span class="badge badge-red">Registro previo</span></td>
+          </tr>
+          <!-- Amex -->
+          <tr data-tipo="cashback msi manual">
+            <td><strong>American Express</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y servicios</span></td>
+            <td>$1,500 cashback fijo (Aeroméxico, Walmart, etc.)<br>$2,000 con Platinum Aeroméxico</td>
+            <td>3, 6, 9, 12 o 18 MSI</td>
+            <td>Variable por oferta<br>(desde $500 general)</td>
+            <td>$1,500 o $2,000 por oferta activada</td>
+            <td><span class="badge badge-red">Guardar Amex Offers</span></td>
+          </tr>
+          <!-- Openbank -->
+          <tr data-tipo="cashback msi auto">
+            <td><strong>Openbank</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td>3% cashback ilimitado en digital<br>$500 bono en app al diferir<br>10% cupón ML y Walmart</td>
+            <td>3 MSI (compras digitales &gt;$1,500)</td>
+            <td>$5,000 para bono de $500<br>Sin mínimo para cashback 3%</td>
+            <td>$500 (bono) + 3% ilimitado</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- Nu -->
+          <tr data-tipo="cashback auto">
+            <td><strong>Nu México</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito digital</span></td>
+            <td>VeraNu 2026: 1 cofre virtual<br>(hasta $500) por cada $1,000 gastados</td>
+            <td>Contado o MSI en participantes</td>
+            <td>$400 por transacción<br>$3,000 acumulado (límite cofres)</td>
+            <td>Máx. 3 cofres ($1,500 total)</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- Mercado Pago -->
+          <tr data-tipo="cashback msi auto">
+            <td><strong>Mercado Pago</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
+            <td>Hasta 24 MSI en Mercado Libre<br>15% cupón de descuento</td>
+            <td>Hasta 24 MSI con tarjeta propia</td>
+            <td>$2,000 para cupones<br>Sin mínimo para MSI</td>
+            <td>$1,000 descuento por transacción</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- Klar -->
+          <tr data-tipo="cashback auto">
+            <td><strong>Klar</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td>Klarfest: reembolsos probabilísticos<br>aleatorios hasta 100%</td>
+            <td>Contado</td>
+            <td>Variable según comercio</td>
+            <td>Sujeto a sorteo</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- Stori -->
+          <tr data-tipo="cashback msi auto">
+            <td><strong>Stori</strong><br><span style="font-size:12px;color:var(--mid)">Crédito digital y física</span></td>
+            <td>Reembolsos en compras seleccionadas<br>Plazos sin intereses</td>
+            <td>Según comercio participante</td>
+            <td>Variable</td>
+            <td>Variable</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- Ualá -->
+          <tr data-tipo="cashback auto">
+            <td><strong>Ualá</strong><br><span style="font-size:12px;color:var(--mid)">Crédito y débito</span></td>
+            <td>Descuentos en Xiaomi Store, Decathlon<br>y socios del evento</td>
+            <td>Contado</td>
+            <td>Variable</td>
+            <td>Variable</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- Kueski -->
+          <tr data-tipo="bnpl">
+            <td><strong>Kueski Pay</strong><br><span style="font-size:12px;color:var(--mid)">BNPL · sin tarjeta de crédito</span></td>
+            <td>Financiamiento a quincenas<br>Cupones Amazon, Viva, Adidas</td>
+            <td>4 a 6 quincenas sin intereses</td>
+            <td>$1,500 (cupón Amazon)<br>$2,599 (QSI retail)</td>
+            <td>Según cupón de cada marca</td>
+            <td><span class="badge badge-gray">Código en checkout</span></td>
+          </tr>
+          <!-- Aplazo -->
+          <tr data-tipo="bnpl">
+            <td><strong>Aplazo</strong><br><span style="font-size:12px;color:var(--mid)">BNPL · sin tarjeta de crédito</span></td>
+            <td>15% descuento primera compra (HS2026)<br>20% bonif. puntos en Papelería Lumen</td>
+            <td>3 quincenas sin intereses</td>
+            <td>Sin mínimo (descuento)<br>$2,000 (QSI)</td>
+            <td>Variable según cupón</td>
+            <td><span class="badge badge-gray">Código HS2026</span></td>
+          </tr>
+          <!-- Liverpool -->
+          <tr data-tipo="cashback msi auto">
+            <td><strong>Liverpool</strong><br><span style="font-size:12px;color:var(--mid)">Tarjeta departamental</span></td>
+            <td>10% descuento primer día<br>+5% adicional con app Liverpool Pocket</td>
+            <td>6 MSI con procesadores</td>
+            <td>$500 para MSI externas</td>
+            <td>Sujeto a línea de crédito</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- Coppel -->
+          <tr data-tipo="cashback auto">
+            <td><strong>Coppel</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Coppel / Coppel Pay</span></td>
+            <td>Descuentos directos en etiqueta<br>Financiamiento vía Coppel Pay</td>
+            <td>Amortización mensual con interés</td>
+            <td>Sin mínimo general</td>
+            <td>Sujeto a línea de crédito</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- DiDi Card -->
+          <tr data-tipo="cashback auto">
+            <td><strong>DiDi Card</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Mastercard</span></td>
+            <td>10% cashback en compras participantes<br>Bonificaciones hasta $10,000 en estado de cuenta</td>
+            <td>Contado (cashback aplica)</td>
+            <td>Variable</td>
+            <td>Hasta $10,000</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- RappiCard -->
+          <tr data-tipo="cashback msi manual">
+            <td><strong>RappiCard</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Visa</span></td>
+            <td>12.5% cashback en MSI y contado<br>$250 por cada $2,000 en comercios participantes<br>+100 comercios afiliados</td>
+            <td>3 a 18 MSI en comercios participantes</td>
+            <td>$2,000 por transacción</td>
+            <td>Consultar tope en app antes de comprar</td>
+            <td><span class="badge badge-red">Activar banner en app</span></td>
+          </tr>
+          <!-- INVEX -->
+          <tr data-tipo="cashback msi manual">
+            <td><strong>INVEX</strong><br><span style="font-size:12px;color:var(--mid)">Crédito</span></td>
+            <td>10% cashback en compras pagadas a MSI</td>
+            <td>MSI en comercios participantes</td>
+            <td>No publicado</td>
+            <td>No publicado</td>
+            <td><span class="badge badge-red">Verificar en app INVEX</span></td>
+          </tr>
+          <!-- Banregio -->
+          <tr data-tipo="msi manual">
+            <td><strong>Banregio</strong><br><span style="font-size:12px;color:var(--mid)">Crédito</span></td>
+            <td>3 a 12 meses sin intereses<br>(sin cashback adicional anunciado)</td>
+            <td>3, 6, 9 o 12 MSI</td>
+            <td>$3,000 mínimo</td>
+            <td>Hasta $100,000 en compra</td>
+            <td><span class="badge badge-red">Verificar en app</span></td>
+          </tr>
+          <!-- PayPal -->
+          <tr data-tipo="cashback manual">
+            <td><strong>PayPal</strong><br><span style="font-size:12px;color:var(--mid)">Procesador de pagos</span></td>
+            <td>Cupón hasta $1,500 (con Banamex)<br>Cupón hasta $1,000 (Amex/Banorte/BBVA/HSBC/Santander)<br>Cupón $500 (cualquier otro banco)<br><span class="badge badge-red">Cupos limitados</span></td>
+            <td>MSI en comercios afiliados a PayPal</td>
+            <td>$2,500 a MSI para calificar</td>
+            <td>$500 a $1,500 según banco<br>Cupos: 4,669 (Banamex) / 2,000 (otros)</td>
+            <td><span class="badge badge-red">Compra a MSI vía PayPal</span></td>
+          </tr>
+          <!-- Spin by OXXO -->
+          <tr data-tipo="cashback auto">
+            <td><strong>Spin by OXXO</strong><br><span style="font-size:12px;color:var(--mid)">Tarjeta Visa prepago digital</span></td>
+            <td>5% cashback ($5 por cada $100 de compra)<br><span class="badge badge-red">Solo por invitación directa</span><br>Limitado a 50,000 clientes</td>
+            <td>Contado</td>
+            <td>$100 por transacción</td>
+            <td>Máx. $25 por cliente (1 sola compra)</td>
+            <td><span class="badge badge-red">Solo invitados + primeros 50,000</span></td>
+          </tr>
+          <!-- Falabella CMR -->
+          <tr data-tipo="cashback msi auto">
+            <td><strong>Falabella CMR</strong><br><span style="font-size:12px;color:var(--mid)">Crédito Mastercard</span></td>
+            <td>$300 de bonificación por cada $3,000 a MSI<br>(equivale a 10% de devolución)</td>
+            <td>MSI en comercios participantes</td>
+            <td>$3,000 por ticket a MSI</td>
+            <td>Variable según monto acumulado</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+          <!-- Banco Azteca -->
+          <tr data-tipo="cashback msi auto">
+            <td><strong>Banco Azteca</strong><br><span style="font-size:12px;color:var(--mid)">Tarjetas Azteca</span></td>
+            <td>Descuentos en productos con Tarjetas Azteca<br>(porcentajes no publicados aún)</td>
+            <td>MSI en comercios seleccionados</td>
+            <td>No publicado</td>
+            <td>No publicado</td>
+            <td><span class="badge badge-green">Automático</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert-banner alert-red" style="margin-top:20px">
+      <div class="alert-icon">🚫</div>
+      <p><strong>Tarjetas que no participan:</strong> Tarjetas corporativas, Pyme, Micro Negocios, débito Carnet, y tarjetas básicas (Scotiabank Básica, Banorte Básica, BBVA Crea y Mi Primera Tarjeta). Para Banorte: también excluidas Conmigo, Empuje Negocios y Empresas. PayPal y Spin by OXXO tienen cupos estrictamente limitados: agótalos el primer día.</p>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TAB 2: DETALLE POR BANCO
+  ══════════════════════════════════════ -->
+  <section class="section" id="tab-bancos">
+
+    <h2 class="section-title">Detalle por banco</h2>
+    <p class="section-subtitle">Condiciones finas, exclusiones y fechas clave. Presiona cualquier banco para ver su información completa.</p>
+
+    <div class="cards-grid">
+
+      <!-- CITIBANAMEX -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Citibanamex</div>
+            <div class="card-type">Tarjeta de crédito digital y adicionales</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">📋</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación</div>
+              <div class="card-row-val">Registro obligatorio en el micrositio de Hot Sale con folio. Las compras antes de registrarte no participan.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">⏰</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Horas Banamex</div>
+              <div class="card-row-val">Ventana especial de 15:00 a 17:00 horas CDMX en sitios seleccionados. Reembolso hasta $20,000.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">✅</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Acumulación</div>
+              <div class="card-row-val">Sí permite sumar múltiples compras en distintos comercios para alcanzar el mínimo de $10,000.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🚫</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Exclusiones</div>
+              <ul class="exclusion-list">
+                <li>Tarjeta física (solo aplica la versión digital)</li>
+                <li>Tarjetas corporativas y empresariales</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BBVA -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">BBVA México</div>
+            <div class="card-type">Crédito digital y física</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">⚡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación</div>
+              <div class="card-row-val">Automática. No requiere pre-registro. La bonificación aparece en estado de cuenta en máx. 5 días hábiles (Amazon y PayPal: hasta 60 días hábiles después del cierre del evento).</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🗓️</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Fechas importantes</div>
+              <ul class="key-dates-list">
+                <li><span class="key-date">25 al 30 may</span> Walmart, Bodega Aurrerá, Sam's</li>
+                <li><span class="key-date">31 may al 2 jun</span> ML, Mercado Pago, PayPal, Amazon</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🚫</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Exclusiones críticas</div>
+              <ul class="exclusion-list">
+                <li>Cada ticket debe alcanzar el mínimo por separado (no se acumulan compras)</li>
+                <li>Si tienes historial de e-commerce con tarjeta digital BBVA, debes pagar con digital</li>
+                <li>Tarjetas Crea, Mi Primera Tarjeta, Pyme y Corporativas excluidas</li>
+                <li>Compras en Amazon fragmentadas por envío: solo aplica si se paga en un solo carrito</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HSBC -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">HSBC México</div>
+            <div class="card-type">Crédito digital y física</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">📋</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación</div>
+              <div class="card-row-val">Registro de tarjeta en portal HSBC Hot Sale + correo electrónico. Obligatorio antes de comprar.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🏅</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Segmentación de beneficio</div>
+              <div class="card-row-val">Premier / ONE pre-aprobados (invitación directa): 30%. Premier / ONE regulares: 20%. Cartera estándar: 10%. En todos los casos el tope es $7,000 por titular. Revisa si recibiste una invitación para tramitar tu tarjeta.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">✅</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Acumulación</div>
+              <div class="card-row-val">Sí. Puedes sumar compras en diferentes comercios durante los 9 días para alcanzar el mínimo de $13,500.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SANTANDER -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Santander</div>
+            <div class="card-type">Crédito digital y física</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">📋</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación</div>
+              <div class="card-row-val">Inscripción en santander.com.mx/hot-sale con número de tarjeta o código de cliente. Solo los usuarios registrados participan. El cashback no es retroactivo.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">💳</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Beneficio por tipo de tarjeta</div>
+              <div class="card-row-val">Tarjeta de crédito: 15% de cashback en compras desde $1,500 MXN a MSI. Tarjeta de débito: $100 de descuento en compras desde $600 MXN. Ambas requieren registro previo.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🗓️</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Calendario de cashback extra</div>
+              <ul class="key-dates-list">
+                <li><span class="key-date">25 may</span> Amazon</li>
+                <li><span class="key-date">26 may</span> Telefonía y tecnología (MacStore, iShop, Telcel)</li>
+                <li><span class="key-date">27 may</span> Electrodomésticos (Samsung, LG)</li>
+                <li><span class="key-date">28 may</span> Aerolíneas (Aeroméxico, Volaris, Viva)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">💡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Nota sobre el tope</div>
+              <div class="card-row-val">El tope está sujeto a presupuesto global del programa. Se recomienda comprar al inicio de cada día para asegurar el beneficio.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BANORTE -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Banorte</div>
+            <div class="card-type">Crédito digital exclusivamente</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">📱</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación obligatoria</div>
+              <div class="card-row-val">Activar en la app Banorte Móvil sección "Tu Tarjeta Favorita" antes de cualquier compra. Las compras realizadas antes de activar no participan.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🏬</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Promos por plataforma</div>
+              <ul class="key-dates-list">
+                <li><span class="key-date">Amazon</span>15% bonificación, tope $5,000 por cliente</li>
+                <li><span class="key-date">Mercado Libre</span>10% descuento (código BNRTHS) + 15% bonif. TDC Digital, tope $5,000</li>
+                <li><span class="key-date">Walmart / Sam's / Bodega</span>15% bonif. a 12 o 18 MSI, mínimo $5,000 por ticket</li>
+                <li><span class="key-date">Comercios afiliados</span>15% bonif. en MSI, tope total $9,000</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🚫</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Exclusiones</div>
+              <ul class="exclusion-list">
+                <li>Tarjeta física excluida de todos los beneficios</li>
+                <li>Tarjetas Básica, Conmigo, Corporativa, Empuje Negocios, Negocios y Empresas excluidas</li>
+                <li>Mínimo de $3,000 por ticket en Amazon y ML (no acumulable)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCOTIABANK -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Scotiabank</div>
+            <div class="card-type">Crédito y débito</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">📋</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación</div>
+              <div class="card-row-val">Inscripción en sección "Descubre / Ofertas" de la app ScotiaMóvil o mediante el correo de invitación enviado entre el 15 de mayo y el 2 de junio.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">✅</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Acumulación</div>
+              <div class="card-row-val">Sí. El mínimo de $10,000 se alcanza sumando compras durante el evento.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🚫</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Exclusiones</div>
+              <ul class="exclusion-list">
+                <li>Tarjeta Básica excluida</li>
+                <li>Tarjetas corporativas excluidas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AMEX -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">American Express</div>
+            <div class="card-type">Crédito y servicios</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">📋</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación</div>
+              <div class="card-row-val">Entrar al portal Amex y guardar manualmente cada "Amex Offer" en tu tarjeta antes de realizar la compra. Sin este paso, el reembolso no aplica.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🎯</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Mecánica de las ofertas</div>
+              <div class="card-row-val">Cada oferta es independiente y tiene su propio mínimo de compra. El cashback se aplica al estado de cuenta una vez alcanzada la meta.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">💡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Consejo</div>
+              <div class="card-row-val">Revisa tu portal antes del 25 de mayo. Las offers desaparecen cuando se agota el presupuesto asignado.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPENBANK -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Openbank</div>
+            <div class="card-type">Brazo digital de Santander</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">⚡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Ventaja principal</div>
+              <div class="card-row-val">3% de cashback ilimitado en todas las compras digitales. Sin tope en este beneficio.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">💰</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Bono en app</div>
+              <div class="card-row-val">$500 MXN directamente en la app al diferir compras digitales mayores a $5,000 a 3 MSI.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NU -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Nu México</div>
+            <div class="card-type">VeraNu 2026</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">🎁</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Mecánica de cofres</div>
+              <div class="card-row-val">Por cada $1,000 de compras acumuladas, recibes 1 cofre virtual con un premio en efectivo de $10 a $500. Máximo 3 cofres por cliente.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">💡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Nota</div>
+              <div class="card-row-val">Los premios son aleatorios. No es un cashback garantizado fijo. El máximo teórico es $1,500 si los tres cofres otorgan el premio máximo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KUESKI -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Kueski Pay</div>
+            <div class="card-type">BNPL · sin historial crediticio requerido</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">📅</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Cómo funciona</div>
+              <div class="card-row-val">Pago dividido en quincenas. No requiere tarjeta de crédito bancaria. Útil para quien no tiene acceso a crédito tradicional.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🏷️</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Marcas con cupones</div>
+              <div class="card-row-val">Amazon, Viva Aerobus, Adidas y marcas de moda y calzado seleccionadas.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">⚠️</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Consideración</div>
+              <div class="card-row-val">Verifica la tasa de interés si extiendes el plazo más allá de las quincenas sin intereses. Los cargos aplican desde la primera quincena fuera de la promoción.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- DIDI CARD -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">DiDi Card</div>
+            <div class="card-type">Tarjeta de crédito Mastercard</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">💰</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Beneficio</div>
+              <div class="card-row-val">10% de cashback en compras participantes durante el Hot Sale 2026, con bonificaciones de hasta $10,000 reflejadas en el estado de cuenta.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">📊</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Contexto relevante</div>
+              <div class="card-row-val">DiDi Card reportó que en el Hot Sale 2025 las compras en supermercados triplicaron a las de tiendas departamentales. El beneficio aplica en categorías cotidianas, no solo en electrónica.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">⚡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación</div>
+              <div class="card-row-val">Automática para usuarios que recibieron la notificación en la app DiDi. Revisa la sección de promociones dentro de la app antes del 25 de mayo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RAPPICARD -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">RappiCard</div>
+            <div class="card-type">Tarjeta de crédito Visa</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">💰</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Mecánica 2026</div>
+              <div class="card-row-val">12.5% de cashback en compras a MSI y de contado. $250 pesos de cashback por cada $2,000 pesos gastados en más de 100 comercios participantes. Sin ruletas ni dinámicas de número de folio como en ediciones anteriores.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">📱</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación</div>
+              <div class="card-row-val">Requiere activar el banner de la promoción dentro de la app RappiCard (sección RappiCard dentro de la app Rappi) antes de realizar cualquier compra. Las compras previas a la activación no califican.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">💡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Nota importante</div>
+              <div class="card-row-val">Esta es una excepción temporal. Desde 2025, RappiCard no paga cashback en compras diferidas a meses de forma ordinaria. El beneficio existe únicamente durante los 9 días del Hot Sale. Consulta el tope máximo en la app antes de comprar.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INVEX -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">INVEX</div>
+            <div class="card-type">Tarjeta de crédito</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">💰</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Beneficio</div>
+              <div class="card-row-val">10% de cashback en compras pagadas a meses sin intereses con tarjetas INVEX en comercios participantes del Hot Sale.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">⚠️</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Pendiente de confirmar</div>
+              <div class="card-row-val">INVEX no ha publicado topes máximos, compra mínima ni proceso de activación. Consulta la app o portal INVEX antes del 25 de mayo para verificar condiciones completas.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BANREGIO -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Banregio</div>
+            <div class="card-type">Tarjeta de crédito</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">📅</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Beneficio</div>
+              <div class="card-row-val">3 a 12 meses sin intereses en compras desde $3,000 hasta $100,000 MXN. La promoción no incluye cashback adicional anunciado.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">💡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Cuándo conviene</div>
+              <div class="card-row-val">Útil para compras de alto valor (equipo, muebles, enganches) donde el diferimiento sin intereses libera flujo, aunque no haya cashback. Aplica en la mayoría de comercios que acepten MSI.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAYPAL -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">PayPal</div>
+            <div class="card-type">Procesador de pagos digital</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">💰</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Cupones por banco</div>
+              <ul class="key-dates-list">
+                <li><span class="key-date">Banamex</span>Hasta $1,500 · 4,669 cupos disponibles</li>
+                <li><span class="key-date">Amex / Banorte / BBVA / HSBC / Santander</span>Hasta $1,000 · 2,000 cupos cada banco</li>
+                <li><span class="key-date">Cualquier otro banco</span>$500 · cupos limitados</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">📋</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Cómo funciona</div>
+              <div class="card-row-val">Realiza una compra igual o mayor a $2,500 MXN a cualquier plazo de MSI pagando desde PayPal entre el 25 de mayo y el 2 de junio. Recibirás el cupón por correo electrónico a más tardar 20 días hábiles después de cerrado el evento. El descuento aplica en la siguiente compra.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">⚠️</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Advertencia</div>
+              <div class="card-row-val">Los cupos son estrictamente limitados y se asignan por orden de llegada. Conviene pagar con PayPal a MSI desde el primer día del evento para asegurar el beneficio.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPIN BY OXXO -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Spin by OXXO</div>
+            <div class="card-type">Tarjeta Visa prepago digital</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">💰</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Mecánica</div>
+              <div class="card-row-val">$5 pesos en fondos de pago electrónico por cada $100 de compra en línea con tarjeta Spin by OXXO. Equivale a 5% de cashback, con tope de $25 por cliente (una sola compra).</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">🔒</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Restricciones críticas</div>
+              <ul class="exclusion-list">
+                <li>Solo participan clientes que reciban invitación directa de Spin by OXXO</li>
+                <li>Cupo total: primeros 50,000 clientes acreedores</li>
+                <li>Válido para una sola compra en línea durante la vigencia</li>
+                <li>Los fondos se acreditan en 72 horas si el cupo no está agotado</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">💡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Recomendación</div>
+              <div class="card-row-val">Si recibes la notificación, úsala el primer día. El beneficio es modesto ($25 máximo) pero los cupos se agotan rápido.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FALABELLA CMR -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Falabella CMR</div>
+            <div class="card-type">Crédito Mastercard</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">💰</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Beneficio</div>
+              <div class="card-row-val">$300 pesos de bonificación por cada $3,000 pesos en compras a meses sin intereses. Equivale a 10% de devolución, acumulable según el monto total de compras.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">⚡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Activación</div>
+              <div class="card-row-val">Automática al pagar a MSI con la tarjeta CMR Mastercard en comercios participantes. Verifica en el portal de Banco Falabella México las tiendas afiliadas.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BANCO AZTECA -->
+      <div class="bank-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <div>
+            <div class="card-bank-name">Banco Azteca</div>
+            <div class="card-type">Tarjetas Azteca</div>
+          </div>
+          <div class="card-toggle">+</div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="card-icon">📋</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Estado de la promoción</div>
+              <div class="card-row-val">Banco Azteca confirmó participación oficial en el Hot Sale 2026. No ha publicado porcentajes ni condiciones específicas hasta el momento. El banco comunicó que habrá descuentos en productos al utilizar cualquiera de sus tarjetas Azteca.</div>
+            </div>
+          </div>
+          <div class="card-row">
+            <div class="card-icon">💡</div>
+            <div class="card-row-content">
+              <div class="card-row-label">Qué hacer</div>
+              <div class="card-row-val">Consulta el portal de Banco Azteca o la app antes del 25 de mayo para verificar los términos concretos. Históricamente ofrece MSI en electrónica y línea blanca.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /cards-grid -->
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TAB 3: STACKEO
+  ══════════════════════════════════════ -->
+  <section class="section" id="tab-stackeo">
+
+    <h2 class="section-title">Cómo hacer stackeo de promociones</h2>
+    <p class="section-subtitle">El stackeo consiste en combinar múltiples capas de descuento en una misma compra. Cada capa reduce el precio antes de que aplique la siguiente. Aquí el orden correcto:</p>
+
+    <div class="stack-steps">
+
+      <div class="stack-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <div class="step-title">Capa comercial: descuento del comercio</div>
+          <div class="step-desc">El comercio aplica su rebaja directa sobre el precio de lista. Es el primer descuento que ves en la plataforma. Antes de avanzar, verifica con Keepa, Compy o Lowpi que el precio "de lista" no fue inflado semanas antes del evento.</div>
+          <span class="step-tag">Ejemplo: $15,000 → $10,500 con 30% de descuento</span>
+        </div>
+      </div>
+
+      <div class="stack-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <div class="step-title">Capa de cupón: portal Hot Sale o marketplace</div>
+          <div class="step-desc">En el checkout, ingresa el código del cupón obtenido en hotsale.com.mx o en la sección de promociones de Amazon, Mercado Libre o PayPal. Este código reduce el subtotal neto que se facturará.</div>
+          <span class="step-tag">Ejemplo: $10,500 → $10,000 con cupón de $500 (tope aplicado)</span>
+        </div>
+      </div>
+
+      <div class="stack-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <div class="step-title">Capa de plazo: meses sin intereses</div>
+          <div class="step-desc">Selecciona el diferimiento a MSI con tu tarjeta de crédito. No reduce el monto a pagar de inmediato, pero divide el costo sin generar intereses y libera flujo mensual. Este es el apalancamiento pasivo: el dinero que no pagas hoy puede seguir generando rendimiento.</div>
+          <span class="step-tag">Ejemplo: $10,000 ÷ 9 MSI = $1,111 / mes</span>
+        </div>
+      </div>
+
+      <div class="stack-step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <div class="step-title">Capa bancaria: cashback o bonificación</div>
+          <div class="step-desc">Tu banco aplica el reembolso sobre el monto neto facturado (después de los cupones) si cumpliste con el mínimo de compra y activaste la promoción correctamente. Este saldo regresa a tu estado de cuenta y puedes usarlo para abonar a la deuda del mismo cargo.</div>
+          <span class="step-tag">Ejemplo: $10,000 × 15% BBVA = $1,500 de regreso</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIMULACION -->
+    <div class="simulacion">
+      <div class="sim-title">Simulación real: laptop $15,000</div>
+      <div class="sim-subtitle">Usando tarjeta de crédito digital BBVA en Mercado Libre · Hot Sale 2026</div>
+      <div class="sim-rows">
+        <div class="sim-row">
+          <span class="sim-label">Precio de lista</span>
+          <span class="sim-val">$15,000.00</span>
+        </div>
+        <div class="sim-row">
+          <span class="sim-label"><span style="color:var(--gold-lt);font-weight:700;">↓</span> Descuento comercial 30% (Capa 1)</span>
+          <span class="sim-val">− $4,500.00</span>
+        </div>
+        <div class="sim-row">
+          <span class="sim-label">Subtotal tras descuento</span>
+          <span class="sim-val">$10,500.00</span>
+        </div>
+        <div class="sim-row">
+          <span class="sim-label"><span style="color:var(--gold-lt);font-weight:700;">↓</span> Cupón BBVA-ML (tope $500) (Capa 2)</span>
+          <span class="sim-val">− $500.00</span>
+        </div>
+        <div class="sim-row">
+          <span class="sim-label">Monto facturado en checkout</span>
+          <span class="sim-val">$10,000.00</span>
+        </div>
+        <div class="sim-row">
+          <span class="sim-label">Plazo elegido (Capa 3)</span>
+          <span class="sim-val">9 MSI = $1,111/mes</span>
+        </div>
+        <div class="sim-row">
+          <span class="sim-label"><span style="color:var(--gold-lt);font-weight:700;">↓</span> Bonificación BBVA 15% (Capa 4)</span>
+          <span class="sim-val">− $1,500.00</span>
+        </div>
+        <div class="sim-row final">
+          <span class="sim-label">Costo de adquisición neto real</span>
+          <span class="sim-val">$8,500.00</span>
+        </div>
+      </div>
+      <div class="sim-note">Ahorro total: $6,500 sobre precio de lista. Descuento efectivo real: 43.3%. La bonificación de $1,500 aparece en el estado de cuenta dentro de los 5 días hábiles siguientes a la transacción y puede aplicarse directamente al saldo del cargo.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="alert-banner">
+      <div class="alert-icon">💡</div>
+      <p><strong>Punto clave del stackeo:</strong> el orden importa. El cupón aplica sobre el precio ya descontado, y la bonificación bancaria aplica sobre el monto ya cuponeado. Si alteras el orden o olvidas activar el beneficio del banco antes de comprar, pierdes la Capa 4 completa.</p>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TAB 4: HERRAMIENTAS
+  ══════════════════════════════════════ -->
+  <section class="section" id="tab-herramientas">
+
+    <h2 class="section-title">Herramientas para verificar precios</h2>
+    <p class="section-subtitle">Antes de asumir que una oferta es real, confirma el precio histórico. Estas herramientas lo hacen en segundos.</p>
+
+    <div class="tools-grid">
+
+      <!-- COMPY -->
+      <div class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon" style="background:#E8F4E8;">🔍</div>
+          <div>
+            <div class="tool-name">Compy.mx</div>
+            <div class="tool-tagline">Comparador multitienda con historial y alertas · enfocado en México</div>
+            <div class="tool-url">compy.mx</div>
+          </div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-meta">
+            <span class="badge badge-green">Gratis</span>
+            <span class="badge badge-gray">Web + App</span>
+            <span class="badge badge-gold">15+ tiendas MX</span>
+          </div>
+          <p style="font-size:13.5px;color:var(--mid);margin-bottom:16px;line-height:1.6;">Compara precios en Liverpool, Coppel, Bodega Aurrerá, Elektra y más de 15 tiendas mexicanas. Incluye historial de precios y alertas por correo cuando baja el precio de un artículo. También tiene sección de cupones activos.</p>
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">Entra a <strong>compy.mx</strong> desde tu navegador o descarga la app.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">Escribe el nombre del producto en el buscador (ejemplo: "Smart TV 55 pulgadas Samsung").</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">Revisa los resultados ordenados por precio. Haz clic en el producto que te interesa para ver el <strong>historial de precios</strong> y confirmar que la oferta actual es un mínimo real.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-text">Si el precio es bueno pero quieres esperar, crea una cuenta gratuita y activa una <strong>alerta por correo</strong> para recibir aviso si baja más.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">5</div>
+              <div class="step-text">Visita la sección <strong>"Cupones"</strong> dentro de Compy para encontrar códigos activos de comercios participantes en Hot Sale.</div>
+            </div>
+          </div>
+          <div class="tip-box"><strong>Mejor uso:</strong> tiendas departamentales mexicanas. Liverpool, Coppel y Elektra tienen cobertura sólida aquí.</div>
+        </div>
+      </div>
+
+      <!-- KEEPA -->
+      <div class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon" style="background:#FFF3E0;">📈</div>
+          <div>
+            <div class="tool-name">Keepa</div>
+            <div class="tool-tagline">Rastreador de historial de precios · exclusivo para Amazon</div>
+            <div class="tool-url">keepa.com</div>
+          </div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-meta">
+            <span class="badge badge-green">Gratis (funciones básicas)</span>
+            <span class="badge badge-gray">Extensión de navegador</span>
+            <span class="badge badge-red">Solo Amazon</span>
+          </div>
+          <p style="font-size:13.5px;color:var(--mid);margin-bottom:16px;line-height:1.6;">La herramienta más precisa para Amazon México. Muestra la evolución completa del precio de un producto desde su lanzamiento, directamente en la página del producto. También permite alertas por correo o Telegram.</p>
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">Entra a <strong>keepa.com</strong> y descarga la extensión para Chrome, Firefox o Edge. Es gratuita.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">Entra a cualquier producto en <strong>Amazon México (amazon.com.mx)</strong>. Verás automáticamente una gráfica insertada debajo del precio oficial que muestra el historial completo.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">Analiza la gráfica: si el precio actual es similar o mayor al precio de los últimos 3 meses, la "oferta" no es tal. Si es un mínimo histórico, la compra tiene sentido.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-text">Para activar alertas, crea una cuenta gratuita en keepa.com, establece tu <strong>precio objetivo</strong> y conecta tu cuenta de Telegram o correo para recibir notificaciones en tiempo real.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">5</div>
+              <div class="step-text">También puedes ver el historial de disponibilidad en stock: si un artículo se agotó muchas veces en el pasado, puede agotarse rápido durante el Hot Sale.</div>
+            </div>
+          </div>
+          <div class="tip-box"><strong>Mejor uso:</strong> cualquier compra en Amazon, especialmente electrónica y cómputo. Indispensable para confirmar que el precio del Hot Sale es genuinamente bajo.</div>
+        </div>
+      </div>
+
+      <!-- LOWPI -->
+      <div class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon" style="background:#E8EEF8;">💻</div>
+          <div>
+            <div class="tool-name">Lowpi.com</div>
+            <div class="tool-tagline">Comparador rápido con 35+ tiendas, historial y alertas ilimitadas</div>
+            <div class="tool-url">lowpi.com</div>
+          </div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-meta">
+            <span class="badge badge-green">Gratis</span>
+            <span class="badge badge-gray">Web + App iOS y Android</span>
+            <span class="badge badge-gold">35+ tiendas MX</span>
+          </div>
+          <p style="font-size:13.5px;color:var(--mid);margin-bottom:16px;line-height:1.6;">Cubre Amazon, Walmart, Mercado Libre, Liverpool, Coppel, Elektra, Best Buy y más de 30 tiendas. Ordena resultados de menor a mayor precio e incluye historial por producto. Las alertas de precio son gratuitas e ilimitadas.</p>
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">Entra a <strong>lowpi.com</strong> o descarga la app en iOS o Android.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">Escribe el nombre exacto del producto o modelo en el buscador (ejemplo: "iPhone 15 128GB"). Sé específico para evitar resultados irrelevantes.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">Los resultados aparecerán ordenados de <strong>menor a mayor precio</strong> incluyendo el costo de envío cuando está disponible. Compara las opciones de distintas tiendas en una sola pantalla.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-text">Haz clic en el producto para ver el <strong>historial de precio</strong> y confirmar si el precio actual es bajo en comparación con los últimos meses.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">5</div>
+              <div class="step-text">Activa una <strong>alerta de precio</strong> gratuita con tu correo. Puedes crear tantas alertas como quieras sin costo.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">6</div>
+              <div class="step-text">Al hacer clic en "Comprar", Lowpi te redirige directamente a la tienda oficial. La transacción se realiza en la tienda, no en Lowpi.</div>
+            </div>
+          </div>
+          <div class="tip-box"><strong>Mejor uso:</strong> cuando quieres comparar el mismo producto en varias tiendas al mismo tiempo y ver de un vistazo dónde está más barato, incluyendo envío.</div>
+        </div>
+      </div>
+
+      <!-- GOOGLE SHOPPING -->
+      <div class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon" style="background:#F0E8F8;">🛒</div>
+          <div>
+            <div class="tool-name">Google Shopping</div>
+            <div class="tool-tagline">Comparador integrado en Google · sin necesidad de instalar nada</div>
+            <div class="tool-url">google.com.mx &rsaquo; pestaña &ldquo;Shopping&rdquo;</div>
+          </div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-meta">
+            <span class="badge badge-green">Gratis</span>
+            <span class="badge badge-gray">Web y móvil</span>
+            <span class="badge badge-gold">Cientos de tiendas</span>
+          </div>
+          <p style="font-size:13.5px;color:var(--mid);margin-bottom:16px;line-height:1.6;">Integrado directamente en Google. No requiere instalar nada. Compara precios en tiempo real entre Walmart, Liverpool, Bodega Aurrerá, Costco y cientos de tiendas más. Muestra indicadores de si el precio es "bajo", "promedio" o "alto" respecto al mercado.</p>
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">Abre Google y busca el nombre del producto (ejemplo: "laptop Lenovo IdeaPad 5 15 pulgadas"). Verás resultados de Shopping directamente en la búsqueda.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">Haz clic en la pestaña <strong>"Shopping"</strong> para ver todos los resultados de tiendas. Puedes filtrar por precio, tienda y si incluye envío gratis.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">Selecciona un producto para ver el panel de comparación: muestra el precio en distintas tiendas, el historial reciente y un indicador de si el precio está en rango <strong>bajo, promedio o alto</strong>.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-text">Activa la <strong>alerta de precio</strong> desde el panel del producto haciendo clic en "Seguir precio". Google te avisa por correo si el precio baja.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">5</div>
+              <div class="step-text">Usa el filtro de <strong>meses sin intereses</strong> disponible en algunos resultados para comparar el costo real al financiar la compra.</div>
+            </div>
+          </div>
+          <div class="tip-box"><strong>Mejor uso:</strong> búsqueda inicial rápida cuando no tienes clara la tienda. Ideal para electrodomésticos y artículos de gran formato donde Walmart, Liverpool y Costco compiten directamente. No tiene historial tan detallado como Keepa, pero cubre muchas más tiendas y no requiere configuración.</div>
+        </div>
+      </div>
+
+    </div><!-- /tools-grid -->
+
+    <div class="divider"></div>
+
+    <div class="alert-banner">
+      <div class="alert-icon">📌</div>
+      <p><strong>Recomendación de uso combinado:</strong> usa <strong>Keepa</strong> para cualquier compra en Amazon (es el más preciso), <strong>Lowpi o Compy</strong> para comparar entre tiendas mexicanas, y <strong>Google Shopping</strong> cuando no tienes clara la tienda y quieres un panorama amplio rápido.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="page-footer">
+  <strong>ElPlanQueFalta</strong> · Material educativo para consumo inteligente.<br>
+  Verifica siempre los términos y condiciones vigentes directamente con tu banco antes de realizar compras.<br>
+  Este documento no constituye asesoría financiera personalizada.
+</footer>
+
+<script>
+  function switchTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function filterTable(tipo, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const rows = document.querySelectorAll('#main-table tbody tr');
+    rows.forEach(row => {
+      if (tipo === 'todos') {
+        row.classList.remove('hidden-row');
+      } else {
+        const tipos = row.dataset.tipo || '';
+        if (tipos.includes(tipo)) {
+          row.classList.remove('hidden-row');
+        } else {
+          row.classList.add('hidden-row');
+        }
+      }
+    });
+  }
+
+  function toggleCard(header) {
+    const body = header.nextElementSibling;
+    const toggle = header.querySelector('.card-toggle');
+    body.classList.toggle('open');
+    toggle.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
